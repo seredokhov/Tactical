@@ -287,7 +287,6 @@ header .search_block {
 	margin: 0 auto;
 }
 .slider_section {
-	min-height: 900px;
 	background: url(../img/slider_bg.png) #4c4b3b;
 	background-position: center;
 	-webkit-background-size: cover;
@@ -326,6 +325,7 @@ header .search_block {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	min-height: 820px;
 }
 .slider_section .item_content {
 	position: relative;
@@ -360,10 +360,6 @@ header .search_block {
 .slider_section .item .item_img_block {
 	max-width: 100%;
 }
-
-
-
-
 /* content block */
 
 
@@ -397,12 +393,18 @@ section.content {
 
 /* items */
 .item_1 {
-	width: 100%;
-	min-width: 380px;
-	margin: 0 auto;
+	width: 98%;
+	max-width: 380px;
+	margin: 5px auto;
 	height: 430px;
 	background: #ffffff;
 	border: 1px solid #d4d4d4;
+}
+.item_1:hover {
+	border-color: #ffffff;
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.7);
 }
 
 .item_1 .img_block {
@@ -433,6 +435,7 @@ section.content {
 	margin-left: 5px;
 	text-decoration: line-through;
 }
+
 /*  Секция с наклонными блоками */
 .about_section {
 	background: url(../img/about_bg.jpg) #1e1e1e;
@@ -530,4 +533,58 @@ section.content {
 	background: url(../img/about3.png) #ffea00;
 	background-position: center 0;
 	background-size: 100%;
+}
+footer {
+	padding: 30px 0;
+}
+footer .info_block > a {
+	display: block;
+}
+footer .info_block a.call {
+	font-size: 18px;
+	line-height: 22px;
+	color: #1e1e1e;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+}
+footer .info_block a.callback {
+	font-size: 16px;
+	color: #fe0202;
+	text-decoration: underline;
+	line-height: 19px;
+}
+footer .info_block a.policy {
+	text-decoration: underline;
+	color: #727272;
+	font-size: 16px;
+}
+footer h4 {
+	color: #1e1e1e;
+	margin: 0;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+footer .ul_block ul,
+footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+footer .ul_block ul {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
+footer ul a {
+	text-decoration: none;
+	color: #1e1e1e;
+	font-size: 16px;
+	line-height: 19px;
+}
+footer ul a:hover {
+	text-decoration: underline;
+	color: #fe0202;
 }

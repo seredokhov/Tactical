@@ -1,11 +1,5 @@
 $(function() {
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
@@ -45,3 +39,14 @@ $(window).load(function() {
 	$(".loader").delay(400).fadeOut("slow");
 
 });
+
+
+/* Футер, выпадающие списки */
+$(function(){
+	var link = $('footer').find('h4');
+	var drop = $('footer').find('.drop');
+	link.click(function(){
+		drop.not($(this).siblings()).slideUp();
+		$(this).siblings('.drop').slideToggle();
+	})
+})

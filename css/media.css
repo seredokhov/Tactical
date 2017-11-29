@@ -1,6 +1,13 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px) {
+	.skew,
+	.fix .title,
+	.fix .link {
+		transform: inherit;
+	}
+}
 @media only screen and (max-width : 1300px) {
 	.slider_section .owl-nav .owl-prev {
 		right: inherit;
@@ -28,16 +35,15 @@
 		transform: translate(-50%, -50%);
 	}
 }
-@media only screen and (max-width : 1200px) {
-
-}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 	.about_section [class*='about_']::after {
 		width: 130%;
 		left: -80px;
-
+	}
+	.navigation_block {
+		display: none;
 	}
 	.about_section [class*='about_'] {
 		max-width: 493px;
@@ -51,6 +57,9 @@
 	}
 	.item_1 {
 		min-width: inherit;
+	}
+	.slider_section .item h1 {
+		font-size: 70px;
 	}
 
 }
@@ -90,6 +99,38 @@
 	.fix .title,
 	.fix .link {
 		transform: inherit;
+	}
+	footer h4 {
+		text-align: center;
+		cursor: pointer;
+	}
+	footer h4:hover {
+		text-decoration: underline;
+	}
+	footer ul {
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-right: 0;
+	}
+	footer .drop {
+		display: none;
+	}
+	footer .info_block {
+		text-align: center;
+	}
+	.slider_section .item h1 {
+		font-size: 50px;
+	}
+	.slider_section .item_type {
+		font-size: 35px;
+	}
+	.slider_section .item_img_block {
+		width: 300px;
+		height: 420px;
+	}
+	.slider_section .item {
+		min-height: 500px;
 	}
 
 }
