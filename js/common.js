@@ -74,3 +74,25 @@ $(function(){
 		}, 300);
 	})
 })
+
+
+/* Каталог */
+$(function(){
+
+	var link = $('.main_ul').find('a');
+	var ulDrop = $('.main_ul').find('.drop_ul');
+
+	link.click(function(){
+
+		if( $(this).siblings('.drop_ul').length ) {
+
+			link.removeClass('active');
+			$(this).addClass('active');
+			ulDrop.not($(this).siblings()).slideUp();
+			$(this).siblings('.drop_ul').slideToggle();
+			return false
+		}
+
+
+	})
+})

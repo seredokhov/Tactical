@@ -7,3 +7,13 @@
 	font-style: normal;
 	font-weight: normal;
 }
+
+@font-face {
+	font-family:"Play-Bold";
+	src: url("../fonts/Play-Bold/Play-Bold.eot");
+	src: url("../fonts/Play-Bold/Play-Bold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/Play-Bold/Play-Bold.woff") format("woff"),
+	url("../fonts/Play-Bold/Play-Bold.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
