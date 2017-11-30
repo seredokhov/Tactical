@@ -35,7 +35,12 @@
 		transform: translate(-50%, -50%);
 	}
 }
-
+@media only screen and (max-width : 1200px) {
+	header .search_block,
+	header .contacts_block {
+		display: none;
+	}
+}
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 	.about_section [class*='about_']::after {
@@ -133,6 +138,15 @@
 		min-height: 500px;
 	}
 
+}
+@media only screen and (max-width : 650px) {
+	.drop_menu .cart_ul {
+		display: block;
+	}
+	header .phone_block,
+	header .cart_block {
+		display: none;
+	}
 }
 
 /* Extra Small Devices, Phones */

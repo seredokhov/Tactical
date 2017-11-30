@@ -50,3 +50,27 @@ $(function(){
 		$(this).siblings('.drop').slideToggle();
 	})
 })
+
+/* Выпадающее меню */
+$(function(){
+	var link = $('.menu_link');
+	var menu = $('.drop_menu');
+	var overlay = $('.overlay');
+	var html = $('html');
+	var body = $('body');
+	link.click(function(){
+		overlay.fadeIn(300);
+		menu.addClass('open');
+		html.css({'overflow-y' : 'hidden'});
+		body.css({'padding-right' : '16px'});
+		return false;
+	})
+	overlay.click(function(){
+		$(this).fadeOut(300);
+		menu.removeClass('open');
+		setTimeout(function(){
+			html.css({'overflow-y' : ''});
+			body.css({'padding-right' : ''});
+		}, 300);
+	})
+})

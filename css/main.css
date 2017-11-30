@@ -83,6 +83,7 @@ header .upper_header {
 header .lower_header {
 	min-height: 70px;
 	background: #1e1e1e;
+	position: relative;
 }
 header .logo {
 	display: block;
@@ -279,7 +280,81 @@ header .search_block {
 	background: #ffffff;
 	color: #000000;
 }
-
+.drop_menu {
+	width: 0;
+	background: #000;
+	position: fixed;
+	z-index: 999;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	color: #fff;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	transition: all .3s linear;
+}
+.drop_menu.open {
+	width: 250px;
+}
+.drop_menu ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.drop_menu li > a {
+	display: block;
+	padding: 5px 15px;
+	color: #ffffff;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.drop_menu li > a:hover {
+	background: #fff;
+	color: #000;
+}
+.drop_menu li.title {
+	padding: 5px 15px;
+	display: block;
+	background: #ebc700;
+	color: #000;
+	white-space: nowrap;
+}
+.drop_menu .cart_ul {
+	display: none;
+}
+.drop_menu a.cart_link,
+.drop_menu a.call {
+	color: #fff;
+}
+.drop_menu a.cart_link:hover,
+.drop_menu a.call:hover {
+	background-color: inherit;
+	color: inherit;
+}
+.drop_menu .cart {
+	content: "";
+	display: inline-block;
+	position: relative;
+	width: 32px;
+	height: 32px;
+	background: url(../img/sprite.png) no-repeat;
+	background-position: -43px 0px;
+	margin-right: 15px;
+}
+.drop_menu .cart > .count {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background: #ebc700;
+	color: #000000;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	position: absolute;
+	bottom: -6px;
+	right: -8px;
+}
 /* Секция слайдера */
 .owl-carousel .owl-item img {
 	width: auto;
@@ -587,4 +662,15 @@ footer ul a {
 footer ul a:hover {
 	text-decoration: underline;
 	color: #fe0202;
+}
+.overlay {
+	position: fixed;
+	display: none;
+	z-index: 100;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.8);
+	cursor: pointer;
 }
