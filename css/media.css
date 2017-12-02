@@ -67,6 +67,15 @@
 		width: 100%;
 		height: auto;
 	}
+	.pagination_top_block .pagination {
+		position: static;
+		margin: 10px 0 20px;
+		text-align: center;
+	}
+	.pagination_block .pagination {
+		float: none;
+		text-align: center;
+	}
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
@@ -92,6 +101,9 @@
 	}
 	.slider_section .item h1 {
 		font-size: 70px;
+	}
+	.item_2_block {
+		justify-content: space-around;
 	}
 }
 
