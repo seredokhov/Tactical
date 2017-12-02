@@ -34,11 +34,38 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+	.contact_info_block {
+		max-width: 506px;
+		padding: 20px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	a.contact_callback {
+		margin: 10px auto;
+	}
 }
 @media only screen and (max-width : 1200px) {
 	header .search_block,
 	header .contacts_block {
 		display: none;
+	}
+	.gallery_block .prewiew_block {
+		flex-direction: row;
+	}
+	.tovar_form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px;
+		padding-bottom: 30px;
+	}
+	.gallery_block {
+		flex-direction: column-reverse;
+		padding: 35px 10px;
+	}
+	.gallery_block .poto_block {
+		width: 100%;
+		height: auto;
 	}
 }
 /* Medium Devices, Desktops */
@@ -150,7 +177,14 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.tovar_form .sell_block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.link_block {
+		margin: 15px 0;
+	}
 }
 
 /* Custom, iPhone Retina */
