@@ -13,23 +13,28 @@ $(function(){
 $(function(){
 	var link = $('.menu_link');
 	var menu = $('.drop_menu');
+	var close = menu.find('.close_menu');
 	var overlay = $('.overlay');
 	var html = $('html');
 	var body = $('body');
 	link.click(function(){
 		overlay.fadeIn(300);
 		menu.addClass('open');
-		html.css({'overflow-y' : 'hidden'});
-		body.css({'padding-right' : '16px'});
+		/*html.css({'overflow-y' : 'hidden'});
+		body.css({'padding-right' : '16px'});*/
 		return false;
 	})
 	overlay.click(function(){
 		$(this).fadeOut(300);
 		menu.removeClass('open');
-		setTimeout(function(){
+		/*setTimeout(function(){
 			html.css({'overflow-y' : ''});
 			body.css({'padding-right' : ''});
-		}, 300);
+		}, 300);*/
+	})
+	close.on('click', function(){
+		menu.removeClass('open');
+		overlay.fadeOut(300);
 	})
 })
 
@@ -70,6 +75,16 @@ $(function(){
 		link.not($(this)).removeClass('active');
 		$(this).addClass('active');
 		return false;
+	})
+})
+
+// Выпадение каталога на маленьких разешениях 
+$(function(){
+	var link = $('.aside_section').find('.title');
+	var ul = $('.aside_section').children('ul');
+	link.on('click', function(){
+		ul.not($(this).siblings()).slideUp();
+		$(this).siblings('ul').slideToggle();
 	})
 })
 
