@@ -67,7 +67,8 @@
 		width: 100%;
 		height: auto;
 	}
-	.pagination_top_block .pagination {
+	.pagination_top_block .pagination,
+	.grid_controlls {
 		position: static;
 		margin: 10px 0 20px;
 		text-align: center;
@@ -91,11 +92,18 @@
 }
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.size_table_modal {
+		width: 95%;
+	}
+	.size_table_modal .table_block{
+		overflow-x: auto;
+	}
 	.about_section [class*='about_']::after {
 		width: 130%;
 		left: -80px;
 	}
-	.navigation_block {
+	.navigation_block,
+	.size_table_modal .modal_close {
 		display: none;
 	}
 	.about_section [class*='about_'] {
@@ -219,6 +227,17 @@
 	}
 	.item_block h2 {
 		text-align: center;
+	}
+	.modal {
+	    width: 90%;
+	    height: 80%;
+	    padding: 70px 30px;
+	}
+	.grid_controlls {
+		display: none;
+	}
+	.pagination_top_block .pagination {
+		width: 100%;
 	}
 }
 

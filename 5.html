@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+<html lang="ru">
 
 <head>
 
@@ -250,21 +247,45 @@
 	</footer>
 
 	<div class="overlay"></div>
-	
 
-	<div class="loader">
-		<div class="loader_inner"></div>
+	<!-- Модальные окна -->
+	<div class="modal callback">
+		<form action="#">
+			<div class="input_group">
+				<label for="name">Ваше имя:</label>
+				<input type="text" id="name" placeholder="Введите Ваше Имя">
+			</div>
+			<div class="input_group">
+				<label for="phone">Номер телефона:</label>
+				<input type="text" id="phone" placeholder="+7(___) ___-____">
+			</div>
+			<div class="btn_block">
+				<input type="submit" class="order_btn" value="Заказать">
+			</div>
+			<div class="chekbox_block">
+				<label>
+					<input class="checkbox" type="checkbox" name="checkbox-test">
+					<span class="checkbox-custom"></span>
+					<span class="label">Нажимая на кнопку "Заказать" - я даю свое согласие на обработку моих <a href="#">персональных данных</a>.</span>
+				</label>
+			</div>
+		</form>
+		<button class="modal_close"></button>
 	</div>
-
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
-
+	<div class="modal conf">
+		<div class="scrollbar-rail">
+			<p>
+				Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+			</p>
+		</div>
+		<button class="modal_close"></button>
+	</div>
+	
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
 	<script src="libs/owl/owl.carousel.js"></script>
+	<script src="libs/jquery/jquery-ui.js"></script>
+	<script src="libs/jquery/jquery.maskedinput.min.js"></script>
+	<script src="libs/jquery/jquery.scrollbar.min.js"></script>
 	<script src="js/common.js"></script>
 	<script>
 		$('.slider_section .owl-carousel').owlCarousel({

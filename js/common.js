@@ -144,3 +144,84 @@ $(function(){
 		}
 	})
 })
+
+
+/*   Модальное окно  */
+
+$(function(){
+	var linkCall = $('a.callback');
+	var byLink = $('a.by_one_click');
+	var linkConf = $('a.conf');
+	var modalCall = $('.modal.callback');
+	var modalConf = $('.modal.conf');
+	var overlay = $('.overlay');
+	var close = $('.modal_close');
+
+	linkCall.add(byLink).add(linkConf).click(function(){
+		overlay.fadeIn();
+		modalCall.fadeIn();
+		return false;
+	})
+
+
+	overlay.click(function(){
+		$(this).fadeOut();
+		$('.modal').fadeOut();
+	})
+	close.click(function(){
+		overlay.fadeOut();
+		$('.modal').fadeOut();
+	})
+
+});
+
+/* Модальное окно с таблицей */
+
+$(function(){
+	var link = $('a.size_table'),
+		modal = $('.size_table_modal'),
+		close = modal.find('.modal_close'),
+		close_link = modal.find('.close_link'),
+		overlay = $('.overlay');
+
+	link.on('click', function(){
+		modal.fadeIn();
+		overlay.fadeIn();
+		return false;
+	});
+	overlay.add(close).add(close_link).on('click', function(){
+		modal.fadeOut();
+		overlay.fadeOut();
+		return false;
+	});
+})
+
+/*  Инициализация маски */
+$(function($){
+$("#phone").mask("+7(999) 999-9999");
+});
+
+/*  Инициализация скролла */
+$(function(){
+    $('.scrollbar-rail').scrollbar();
+});
+
+
+// Изменение сетки
+$(function(){
+	var link = $('#grid_control_link'),
+		ul = $('#grid_control_ul'),
+		innerLink = ul.find('a');
+
+		link.on('click', function(){
+			ul.slideToggle(100);
+			return false;
+		})
+		innerLink.on('click', function(){
+			var txt = $(this).text();
+			link.text(txt);
+			ul.slideUp(100);
+			return false;
+		})
+
+});

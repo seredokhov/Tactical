@@ -59,6 +59,7 @@ body {
 	font-family: "Trebuchet MS regular", sans-serif;
 	overflow-x: hidden;
 	background: url(../img/bg.jpg) center 0px;
+	padding-top: 100px;
 }
 input,
 button {
@@ -67,6 +68,15 @@ button {
 }
 .hidden {
 	display: none;
+}
+header {
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	z-index: 15;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 header .upper_header {
 	text-align: center;
@@ -746,13 +756,18 @@ section.content {
 	float: right;
 }
 .pagination_top_block {
-	position: relative;
+	padding-bottom: 10px;
 }
+
 .pagination_top_block .pagination {
-	position: absolute;
-	right: 0;
-	bottom: 15px;
-	z-index: 1;
+	float: right;
+	overflow: hidden;
+}
+.pagination a.show_all {
+	width: auto;
+	color: #000033;
+	border-color: #000033;
+	padding: 0 5px;
 }
 .pagination a {
 	text-decoration: none;
@@ -771,6 +786,69 @@ section.content {
 	width: 29px;
 	color: #000033;
 	border-color: #000033;
+}
+
+.grid_controlls {
+	float: left;
+	font-size: 16px;
+	line-height: 25px;
+}
+.grid_controlls > * {
+	float: left;
+}
+.grid_controlls .count_item_block {
+	position: relative;
+}
+.grid_controlls span,
+a.count_item {
+	line-height: 25px;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Play-Bold';
+	border: 2px solid transparent;
+	color: #000033;
+	border-color: #000033;
+	padding: 0 5px;
+}
+.grid_controlls span {
+	margin-right: 5px;
+}
+a.count_item {
+	min-width: 29px;
+	height: 29px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 0;
+	transition: all .1s linear;
+}
+a.count_item:hover,
+.grid_controlls ul a:hover {
+	background: #ebc700;
+	color: #000033;
+}
+.grid_controlls ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	display: none;
+}
+.grid_controlls ul a {
+	min-width: 29px;
+	height: 29px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 0;
+	transition: all .1s linear;
+	background: #fff;
+	color: #000033;
+	border: 2px solid #000033;
+	font-family: 'Play-Bold';
+	margin-top: 2px;
 }
 /* О нас */
 .about {
@@ -1162,7 +1240,7 @@ footer .info_block a.callback {
 	text-decoration: underline;
 	line-height: 19px;
 }
-footer .info_block a.policy {
+footer .info_block a.conf {
 	text-decoration: underline;
 	color: #727272;
 	font-size: 16px;
@@ -1207,4 +1285,114 @@ footer ul a:hover {
 	right: 0;
 	background: rgba(0,0,0,.8);
 	cursor: pointer;
+}
+/* скролл */
+.scrollbar-rail{height:285px}
+.scrollbar-rail p{font-size:16px;line-height:24px;color:#21252b;padding-right:20px}
+.scroll-wrapper{overflow:hidden!important;padding:0!important;position:relative}
+.scroll-wrapper > .scroll-content{border:none!important;box-sizing:content-box!important;height:auto;left:0;margin:0;max-height:none;max-width:none!important;overflow:scroll!important;padding:0;position:relative!important;top:0;width:auto!important}
+.scroll-wrapper > .scroll-content::-webkit-scrollbar{height:0;width:0}
+.scroll-element{display:none}
+.scroll-element,.scroll-element div{box-sizing:content-box}
+.scroll-element.scroll-x.scroll-scrollx_visible,.scroll-element.scroll-y.scroll-scrolly_visible{display:block}
+.scroll-element .scroll-bar,.scroll-element .scroll-arrow{cursor:default}
+.scroll-textarea{border:1px solid #ccc;border-top-color:#999}
+.scroll-textarea > .scroll-content{overflow:hidden!important}
+.scroll-textarea > .scroll-content > textarea{border:none!important;box-sizing:border-box;height:100%!important;margin:0;max-height:none!important;max-width:none!important;overflow:scroll!important;outline:none;padding:2px;position:relative!important;top:0;width:100%!important}
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar{height:0;width:0}
+.scrollbar-rail > .scroll-element,.scrollbar-rail > .scroll-element div{border:none;margin:0;overflow:hidden;padding:0;position:absolute;z-index:10}
+.scrollbar-rail > .scroll-element{background-color:#fff}
+.scrollbar-rail > .scroll-element div{display:block;height:100%;left:0;top:0;width:100%}
+.scrollbar-rail > .scroll-element .scroll-element_size{background-color:#999;background-color:rgba(0,0,0,0.3)}
+.scrollbar-rail > .scroll-element .scroll-element_outer:hover .scroll-element_size{background-color:#666;background-color:rgba(0,0,0,0.5)}
+.scrollbar-rail > .scroll-element.scroll-x{bottom:0;height:12px;left:0;min-width:100%;padding:3px 0 2px;width:100%}
+.scrollbar-rail > .scroll-element.scroll-y{height:100%;min-height:100%;padding:0 2px 0 3px;right:0;top:0;width:12px}
+.scrollbar-rail > .scroll-element .scroll-bar{background-color:#bdbdbf;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+.scrollbar-rail > .scroll-element .scroll-element_outer:hover .scroll-bar{box-shadow:1px 1px 3px rgba(0,0,0,0.6)}
+.scrollbar-rail > .scroll-content.scroll-scrolly_visible{left:-17px;margin-left:17px}
+.scrollbar-rail > .scroll-content.scroll-scrollx_visible{margin-top:17px;top:-17px}
+.scrollbar-rail > .scroll-element.scroll-x .scroll-bar{height:10px;min-width:10px;top:1px}
+.scrollbar-rail > .scroll-element.scroll-y .scroll-bar{left:2px;min-height:10px;width:7px}
+.scrollbar-rail > .scroll-element.scroll-x .scroll-element_outer{height:15px;left:5px}
+.scrollbar-rail > .scroll-element.scroll-x .scroll-element_size{height:2px;left:-10px;top:5px}
+.scrollbar-rail > .scroll-element.scroll-y .scroll-element_outer{top:5px;width:15px}
+.scrollbar-rail > .scroll-element.scroll-y .scroll-element_size{left:5px;top:-10px;width:1px}
+.scrollbar-rail > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size{left:-25px}
+.scrollbar-rail > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size{top:-25px}
+.scrollbar-rail > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track{left:-25px}
+.scrollbar-rail > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track{top:-25px}
+
+/* Модальные окна */
+
+.modal{display:none;position:fixed;background:#fff;border-radius:10px;top:50%;left:50%;z-index:100;transform:translate(-50%,-50%);-webkit-box-shadow:0 0 15px 1px rgba(0,0,0,0.75);-moz-box-shadow:0 0 15px 1px rgba(0,0,0,0.75);box-shadow:0 0 15px 1px rgba(0,0,0,0.75);width:600px;height:380px;padding:70px}
+.modal.conf{padding:40px 60px;}
+.modal.callback .input_group{margin-bottom:20px}
+.modal.callback input{width:100%;border-radius:10px;border:1px solid #bdbdbf;height:42px;line-height:42px;padding:0 20px}
+.modal.callback .input_group label{font-size:18px;color:#21252b;font-weight:700;margin-bottom:5px;display:block}
+.modal.callback .btn_block{text-align:center;margin-bottom:20px}
+.modal.callback .order_btn{height:42px;line-height:40px;color:#000;background: #ebc700;;text-align:center;width:160px;font-size:20px;border: 2px solid #000000;border-radius:0;}
+.chekbox_block{padding-left:10px}
+.chekbox_block a{color:#00a2ff;text-decoration:underline}
+.checkbox{display:none}
+.checkbox-custom{display:inline-block;vertical-align:top;margin-right:5px;width:20px;height:20px;cursor:pointer;position:relative;border:1px solid #54c0ff}
+.checkbox:checked + .checkbox-custom::before{content:"\2714";display:inline-block;vertical-align:top;font-size:15px;color:#54c0ff;width:100%;text-align:center;height:18px;line-height:18px}
+.chekbox_block .label{display:inline-block;width:92%;font-size:16px;color:#9b9b9b;line-height:24px}
+.modal_close{position:absolute;right:20px;top:15px;background:#fff}
+.modal_close::before{content:"\2716";display:inline-block;color:#d8d8da;font-size:20px}
+
+.size_table_modal {
+	display: none;
+	position: fixed;
+	background: #fff;
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+	z-index: 100;
+	transform: translate(-50%,-50%);
+	-webkit-box-shadow:0 0 15px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow:0 0 15px 1px rgba(0,0,0,0.75);
+	box-shadow:0 0 15px 1px rgba(0,0,0,0.75);
+	width: auto;
+	height: auto;
+	padding: 20px 15px;
+}
+.size_table_modal .modal_close {
+	top: -20px;
+	right: -20px;
+	background: #000;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+.size_table_modal a.close_link {
+	display: block;
+	width: 150px;
+	height: 40px;
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+	border: 2px solid #000;
+	font-size: 17px;
+	line-height: 36px;
+	margin: 15px auto;
+	background: #ebc700;
+}
+.size_table_modal a.close_link:hover {
+	background: #ebc600
+}
+table.size {
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+}
+table.size td {
+	border: 2px solid #ededed;
+	padding: 10px;
+	vertical-align: baseline;
+	font-size: 14px;
+	text-align: center;
+}
+table.size td:first-child{
+	text-align: left;
+	white-space: nowrap;
 }
